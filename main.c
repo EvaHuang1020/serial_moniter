@@ -13,7 +13,8 @@ void main(void)
     P1SEL2 = BIT1|BIT2;
 
     UCA0CTL1 |= UCSWRST+UCSSEL_2;
-    UCA0BR0 = 52;  //settings for 19200 baud
+    //UCA0BR0 = 52;  //settings for 19200 baud
+    UCA0BR0 = 104; // 1MHz 9600
     UCA0BR1 = 0;
     UCA0MCTL = UCBRS_0;
     UCA0CTL1 &= ~UCSWRST;
